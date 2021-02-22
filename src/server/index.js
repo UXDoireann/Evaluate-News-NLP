@@ -44,3 +44,10 @@ console.log(`Your API key is ${process.env.API_KEY}`);
 var textApi = new meaningCloud ({
     application_key: process.env.API_KEY
 });
+
+//Process POST request
+
+app.post('/add', function(req, res){
+    let data = req.body;
+    console.log(data);
+});

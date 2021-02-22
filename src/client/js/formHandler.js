@@ -7,7 +7,7 @@ function handleSubmit(event) {
 
     console.log("::: Form Submitted :::")
 
-
+}
     //POST request
 const postData = async(url = '', data = {})=>{
     console.log(data);
@@ -21,14 +21,14 @@ const postData = async(url = '', data = {})=>{
     });
 
          try{
-             const newData = awaitresponse.json();
+             const newData = await response.json();
              console.log(newData);
              return newData;
          }catch(error){
              console.log("error", error);
          }
         }
-    }
+    
 
     postData('/add', {test:'it works'});
 
@@ -36,6 +36,8 @@ const postData = async(url = '', data = {})=>{
     //.then(function(res) {
     //    document.getElementById('results').innerHTML = res.message
    // })
+
+   export{ postData }
 
 
 export { handleSubmit }
