@@ -13,7 +13,7 @@ let baseURL = 'https://api.meaningcloud.com/sentiment-2.1?key=';
 const json = '&of=json&txt=';
 const apiKey = process.env.API_KEY
 const end = '&model=General&lang=en';
-let formText = document.getElementById('url').value;
+
 
 
 //start up an instance of app
@@ -46,9 +46,6 @@ app.listen(8080, function () {
 //API Key
 console.log(`Your API key is ${process.env.API_KEY}`);
 
-var textApi = new meaningCloud ({
-    application_key: process.env.API_KEY
-});
 
 
 

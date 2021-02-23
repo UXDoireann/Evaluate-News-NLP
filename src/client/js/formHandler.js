@@ -26,9 +26,10 @@ fetch('http://localhost:8080/addData',{
     })
     .then(res => res.json())
     .then(function(res) {
-     document.getElementById('results').innerHTML = res.message
+     document.getElementById('results').innerHTML = res.score_tag
     })
 
+    
         
 }
 
