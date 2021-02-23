@@ -1,3 +1,7 @@
+projectData = {};
+
+const fetch = require("node-fetch");
+
 const dotenv = require('dotenv');
 dotenv.config();
 
@@ -24,19 +28,17 @@ app.use(express.static('dist'))
 
 console.log(__dirname)
 
-app.get('/', function (req, res) {
-     res.sendFile('dist/index.html')
+//app.get('/', function (req, res) {
+   //  res.sendFile('dist/index.html')
     //res.sendFile(path.resolve('src/client/views/index.html'))
-})
+//})
 
 // designates what port the app will listen to for incoming requests
 app.listen(8081, function () {
     console.log('Example app listening on port 8080!')
 })
 
-app.get('/test', function (req, res) {
-    res.send(mockAPIResponse)
-})
+
 
 //API Key
 console.log(`Your API key is ${process.env.API_KEY}`);
@@ -45,9 +47,23 @@ var textApi = new meaningCloud ({
     application_key: process.env.API_KEY
 });
 
-//Process POST request
+//Get request
+//app.get('/test', function (req, res) {
+  //  res.send(mockAPIResponse)
+//})
+app.get('/all', function(req, res){
+    res.send(projectData);
+    console.log('Get project data');
+})
 
-app.post('/add', function(req, res){
+//POST request
+app.post('/addData', addData);
+
+function addData(req,res){
     let data = req.body;
-    console.log(data);
-});
+    Object.assign(projectData, data);
+    res.send(projectData);
+    console.log(projectData);
+};
+
+
