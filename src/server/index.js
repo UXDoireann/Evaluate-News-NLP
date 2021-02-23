@@ -1,6 +1,6 @@
 projectData = {};
 
-const fetch = require("node-fetch");
+const fetch = require('node-fetch');
 const dotenv = require('dotenv');
 dotenv.config();
 
@@ -56,7 +56,7 @@ var textApi = new meaningCloud ({
 
 //POST request
 app.post("/addData", async(req, res)=>{
-    const getSentiment = await fetch(`${baseURL}${apiKey}${json}${formText}${end}`,{
+    const getSentiment = await fetch(`${baseURL}${apiKey}&lang=auto&url=${req.body.formText}`,{
         method: 'POST'
     });
     try{

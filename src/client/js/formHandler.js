@@ -18,10 +18,11 @@ function handleSubmit(event) {
 fetch('http://localhost:8080/addData',{
         method: 'POST',
         credentials: 'same-origin',
+       mode: 'cors',
         headers:{
             'Content-Type':'application/json',
         },
-        body:JSON.stringify({formText}),
+        body:JSON.stringify({formText: formText}),
     })
     .then(res => res.json())
     .then(function(res) {
