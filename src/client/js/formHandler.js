@@ -26,13 +26,19 @@ fetch('http://localhost:8080/addData',{
     })
     .then(res => res.json())
     .then(function(res) {
-        document.getElementById('confidence').innerHTML = "The tone of confidence in this text is rated at "+ res.confidence;
+        document.getElementById('confidence').innerHTML = "Feelings of confidence in this text are given a rating of "+ res.confidence +"%.";
         if (res.score_tag === 'N'){
-        document.getElementById('polarity').innerHTML = "Polarity of this text is given a rating of negative" }
+        document.getElementById('polarity').innerHTML = "Overall, the tone is negative." }
+        else if(res.score_tag === 'N+'){
+            document.getElementById('polarity').innerHTML = "Overall, the tone is very negative."}
+        else if(res.score_tag === 'NONE'){
+            document.getElementById('polarity').innerHTML = "No sentiment is detected."}
+        else if(res.score_tag === 'P+'){
+            document.getElementById('polarity').innerHTML = "Overall, the tone is very positive"}
         else if(res.score_tag === 'NEU'){
-            document.getElementById('polarity').innerHTML = "Polarity of this text is given a rating of neutral"}
+            document.getElementById('polarity').innerHTML = "Overall, the tone is neutral."}
          else if(res.score_tag === 'P'){
-             document.getElementById('polarity').innerHTML = "Polarity of this text is given a rating of positive"}
+             document.getElementById('polarity').innerHTML = "Overall, the tone is positive."}
 
      document.getElementById('other').innerHTML = "Other details are " + res.segment_list;
     })
