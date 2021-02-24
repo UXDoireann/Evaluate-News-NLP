@@ -26,7 +26,15 @@ fetch('http://localhost:8080/addData',{
     })
     .then(res => res.json())
     .then(function(res) {
-     document.getElementById('results').innerHTML = res.score_tag
+        document.getElementById('confidence').innerHTML = "The tone of confidence in this text is rated at "+ res.confidence;
+        if (res.score_tag === 'N'){
+        document.getElementById('polarity').innerHTML = "Polarity of this text is given a rating of negative" }
+        else if(res.score_tag === 'NEU'){
+            document.getElementById('polarity').innerHTML = "Polarity of this text is given a rating of neutral"}
+         else if(res.score_tag === 'P'){
+             document.getElementById('polarity').innerHTML = "Polarity of this text is given a rating of positive"}
+
+     document.getElementById('other').innerHTML = "Other details are " + res.segment_list;
     })
 
     
