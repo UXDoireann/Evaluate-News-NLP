@@ -20,7 +20,7 @@
         <main>
             <section>
                 <form class="" id = "text" onsubmit="return Client.handleSubmit(event)">
-                    <input id="url" type="text" name="input" value=""  placeholder="Name">
+                    <input id="url" type="text" name="input" value=""  placeholder="Copy and paste the url of a news article here">
                     <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
                 </form>
             </section>
@@ -28,10 +28,11 @@
             <section>
                 <strong>Form Results:</strong>
                 <div id="results">
+                    <div id = "obj"></div>
                     <div id = "confidence"></div>
                     <div id = "polarity"></div>
+                    <div id = "agreement"></div>
                     <div id = "irony"></div>
-                    <div id = "other"></div>
                 </div>
             </section>
         </main>

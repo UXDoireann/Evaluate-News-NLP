@@ -1,3 +1,4 @@
+import { response } from "express";
 
 
 function handleSubmit(event) {
@@ -38,9 +39,24 @@ fetch('http://localhost:8080/addData',{
         else if(res.score_tag === 'NEU'){
             document.getElementById('polarity').innerHTML = "Overall, the tone is neutral."}
          else if(res.score_tag === 'P'){
-             document.getElementById('polarity').innerHTML = "Overall, the tone is positive."}
+             document.getElementById('polarity').innerHTML = "Overall, the tone is positive."};
+        if (res.agreement === 'AGREEMENT'){
+            document.getElementById('agreement').innerHTML = "This tone is consistent throughout the text"}
+            else if(res.agreement === 'DISAGREEMENT'){
+                document.getElementById('agreement').innerHTML = "However, this tone isn't consistent throughout the text"};
+         if(res.subjectivity === 'OBJECTIVE'){
+             document.getElementById('obj').innerHTML = "Our analysis notes that this article is more objective than subjective."}
+         else if(res.subjectivity === 'SUBJECTIVE'){
+             document.getElementById('obj').innerHTML = "Our analysis notes that this article is more subjective than objective." };  
+         if(res.irony === 'NONIRONIC'){
+             document.getElementById('ironic').innerHTML = "We detected no irony."}
+             else if(res.irony === 'IRONIC'){
+                 document.getElementById('ironic').innerHTML = "Also, we detected a level of irony."}
+             else if(res.irony === null){
+                 document.getElementById('ironic').innerHTML = ""}    
+         
 
-     document.getElementById('other').innerHTML = "Other details are " + res.segment_list;
+     
     })
 
     
