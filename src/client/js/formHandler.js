@@ -1,4 +1,4 @@
-import { response } from "express";
+//import { response } from "express";
 
 
 function handleSubmit(event) {
@@ -47,7 +47,9 @@ fetch('http://localhost:8080/addData',{
          if(res.subjectivity === 'OBJECTIVE'){
              document.getElementById('obj').innerHTML = "Our analysis notes that this article is more objective than subjective."}
          else if(res.subjectivity === 'SUBJECTIVE'){
-             document.getElementById('obj').innerHTML = "Our analysis notes that this article is more subjective than objective." };  
+             document.getElementById('obj').innerHTML = "Our analysis notes that this article is more subjective than objective." }
+         else if(res.subjectivity === null){
+             document.getElementById('obj').innerHTML = ""}; 
          if(res.irony === 'NONIRONIC'){
              document.getElementById('ironic').innerHTML = "We detected no irony."}
              else if(res.irony === 'IRONIC'){
