@@ -1,5 +1,19 @@
 header {
     display: flex;
-    justify-content: space-between;
+    //justify-content: space-between;
     padding: 10px 40px;
+
+}
+
+
+#logo{
+    background-image: url('/logo.jpg');
+    background-size: cover;
+    width: 90vw;
+    height: 35vh;
+}
+
+img{
+    width:90%;
+    height:auto;
 }
