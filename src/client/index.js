@@ -13,6 +13,7 @@ import './styles/footer.scss'
 import './styles/form.scss'
 import './styles/header.scss'
 
+
 export {
     checkForName,
     handleSubmit,
@@ -20,3 +21,9 @@ export {
    }
 
    import './styles/logo.jpg'
+
+  /* if (window.innerWidth >= 600) {
+    import('./styles/header-desktop.scss');
+}else if(window.innerWidth<=500){
+    import('./styles/header-mobile.scss');
+}*/

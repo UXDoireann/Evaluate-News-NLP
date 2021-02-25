@@ -3,7 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>Test</title>
-       
+        <meta charset ="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -18,7 +20,11 @@
         
 
         <main>
-            <div id="logo"><img="/logo.jpg" alt="logo"></div>
+            <div id ="container">
+            <div id="left"></div>
+            <div id="logo"></div>
+            <div id ="right"></div>
+            </div>
             <section>
                 <form class="" id = "text" onsubmit="return Client.handleSubmit(event)">
                     <input id="url" type="text" name="input" value=""  placeholder="Copy and paste the url of a news article here">
@@ -27,7 +33,7 @@
             </section>
 
             <section>
-                <strong>Form Results:</strong>
+                <strong></strong>
                 <div id="results">
                     <div id = "obj"></div>
                     <div id = "confidence"></div>
