@@ -5,6 +5,7 @@
     font-family: 'Roboto', sans-serif;
     padding-left:3vw;
     font-style:italic;
+    margin-left: 3w;
 }
 
 #submit{
@@ -18,6 +19,7 @@
     border-style: none;
     margin-top:5vh;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 13px 0 rgba(0,0,0,0.19);
+    margin-left:3vw;
 }
 
 input {
@@ -30,8 +32,10 @@ input {
 
 #results{
     font-family: 'Roboto', sans-serif;
-    font-size: 1vw;
+    font-size: 3vw;
     padding-left:10vw;
+    padding-bottom:10vh;
+    padding-top:3vh;
     /*background-image: linear-gradient(to bottom right, rgba(226, 219, 219, 0.253), rgb(248, 248, 244));
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius:20px;
