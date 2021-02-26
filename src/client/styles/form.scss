@@ -1,6 +1,4 @@
-ul{
-    list-style-type: circle;
-}
+
 
 @media(max-width:1199px){
 
@@ -102,7 +100,7 @@ input {
     #results{
         font-family: 'Roboto', sans-serif;
         font-size: 2vw;
-        
+        width:80vw;
         padding-bottom:10vh;
         padding-top:3vh;
         /*background-image: linear-gradient(to bottom right, rgba(226, 219, 219, 0.253), rgb(248, 248, 244));
