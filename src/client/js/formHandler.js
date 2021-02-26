@@ -1,20 +1,15 @@
-//import { response } from "express";
-const results = document.getElementById('results');
+
+
 
 function handleSubmit(event) {
     event.preventDefault()
-
-    // check what text was put into the form field
+    
     let formText = document.getElementById('url').value; 
-    Client.checkForName(formText)
-   console.log("::: Form Submitted :::")
-   
- 
-
-
-
-
-
+    const results = document.getElementById('results');
+    
+    // check what text was put into the form field
+    if(Client.checkForName(formText)){
+    
     //Fetch request
 fetch('http://localhost:8080/addData',{
         method: 'POST',
@@ -24,6 +19,7 @@ fetch('http://localhost:8080/addData',{
             'Content-Type':'application/json',
         },
         body:JSON.stringify({formText: formText}),
+        
     })
     .then(res => res.json())
    
@@ -64,10 +60,13 @@ fetch('http://localhost:8080/addData',{
                  document.getElementById('ironic').innerHTML = ""}    
          
              })
-            }
+    console.log("::: Form Submitted :::");
+}else{
+            console.log("Not valid url");
+        }
      
    
-
+    }
     
         
 
@@ -82,5 +81,4 @@ fetch('http://localhost:8080/addData',{
 
 
 export { handleSubmit }
-
 
