@@ -33,9 +33,9 @@ fetch('http://localhost:8080/addData',{
             block:"end"
     })
         
-        document.getElementById('confidence').innerHTML = "- Feelings of <em>confidence</em> in this text are given a rating of "+ res.confidence +"%";
+        document.getElementById('confidence').innerHTML = "- Feelings of confidence in this text are given a rating of "+ res.confidence +"%";
         if (res.score_tag === 'N'){
-        document.getElementById('polarity').innerHTML = "- Overall, the tone is <em>negative.</em>" }
+        document.getElementById('polarity').innerHTML = "- Overall, the tone is negative." }
         else if(res.score_tag === 'N+'){
             document.getElementById('polarity').innerHTML = "- Overall, the tone is very negative."}
         else if(res.score_tag === 'NONE'){
