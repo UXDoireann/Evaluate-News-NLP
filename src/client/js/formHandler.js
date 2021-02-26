@@ -1,5 +1,5 @@
 //import { response } from "express";
-
+const results = document.getElementById('results');
 
 function handleSubmit(event) {
     event.preventDefault()
@@ -26,7 +26,13 @@ fetch('http://localhost:8080/addData',{
         body:JSON.stringify({formText: formText}),
     })
     .then(res => res.json())
+   
     .then(function(res) {
+        results.scrollIntoView({
+            behavior:"smooth",
+            block:"end"
+    })
+        
         document.getElementById('confidence').innerHTML = "Feelings of confidence in this text are given a rating of "+ res.confidence +"%.";
         if (res.score_tag === 'N'){
         document.getElementById('polarity').innerHTML = "Overall, the tone is negative." }
@@ -57,13 +63,18 @@ fetch('http://localhost:8080/addData',{
              else if(res.irony === null){
                  document.getElementById('ironic').innerHTML = ""}    
          
-
+             })
+            }
      
-    })
+   
 
     
         
-}
+
+
+
+
+
 
     
 
