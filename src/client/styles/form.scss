@@ -1,3 +1,10 @@
+ul{
+    list-style-type: circle;
+}
+
+@media(max-width:1199px){
+
+
 #url{
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 13px 0 rgba(0,0,0,0.19);
     border-style: none;
@@ -54,6 +61,71 @@ input {
 }
 
 #obj{
-    padding-bottom:2vh;
+    padding-bottom:2vh;        
 }
 
+}
+
+@media(min-width:1200px){
+    #url{
+        box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 13px 0 rgba(0,0,0,0.19);
+        border-style: none;
+        border-radius:15px;
+        font-family: 'Roboto', sans-serif;
+        padding-left:3vw;
+        font-style:italic;
+        margin-left: 3w;
+    }
+    
+    #submit{
+        background-color: rgb(240, 110, 175);
+        color: rgb(245, 241, 244);
+        font-family: 'Roboto', sans-serif;
+        border-radius:15px;
+        padding-top:10px;
+        padding-bottom:10px;
+        font-size:3vh;
+        border-style: none;
+        margin-top:5vh;
+        box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 13px 0 rgba(0,0,0,0.19);
+        margin-left:3vw;
+    }
+    
+    input {
+        padding-top:10px;
+        padding-bottom:10px;
+        width: 90%;
+        line-height: 16px;
+        margin-left: 3vw;
+    }
+    
+    #results{
+        font-family: 'Roboto', sans-serif;
+        font-size: 2vw;
+        
+        padding-bottom:10vh;
+        padding-top:3vh;
+        /*background-image: linear-gradient(to bottom right, rgba(226, 219, 219, 0.253), rgb(248, 248, 244));
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius:20px;
+        padding-left:10vw;
+        padding-right:10vw;
+        padding-top:10vh;
+        padding-bottom:10vh;*/
+    }
+    
+    #confidence{
+        padding-bottom:2vh;
+    }
+    
+    #polarity{
+        padding-bottom:2vh;
+    }
+    
+    #obj{
+        padding-bottom:2vh;        
+    }
+
+
+    
+    }
