@@ -24,11 +24,9 @@ fetch('http://localhost:8080/addData',{
     .then(res => res.json())
    
     .then(function(res) {
-      
-        document.getElementById('results').scrollIntoView({
-            behavior:"smooth",
-            block:"end"
-    })
+      const results = document.getElementById('results');
+        results.scrollIntoView(false)
+    
         
         document.getElementById('confidence').innerHTML = "- Feelings of confidence in this text are given a rating of "+ res.confidence +"%";
         if (res.score_tag === 'N'){
