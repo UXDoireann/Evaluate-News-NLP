@@ -5,7 +5,7 @@ function handleSubmit(event) {
     event.preventDefault()
     
     let formText = document.getElementById('url').value; 
-    const results = document.getElementById('results');
+   
     
     // check what text was put into the form field
     if(Client.checkForName(formText)){
@@ -24,7 +24,8 @@ fetch('http://localhost:8080/addData',{
     .then(res => res.json())
    
     .then(function(res) {
-        results.scrollIntoView({
+      
+        document.getElementById('results').scrollIntoView({
             behavior:"smooth",
             block:"end"
     })
