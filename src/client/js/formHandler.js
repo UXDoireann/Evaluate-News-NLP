@@ -25,7 +25,10 @@ fetch('http://localhost:8080/addData',{
    
     .then(function(res) {
       const results = document.getElementById('results');
-        results.scrollIntoView(false)
+        results.scrollIntoView(false, {
+            behavior:'smooth',
+        block:"end"})
+        
     
         
         document.getElementById('confidence').innerHTML = "- Feelings of confidence in this text are given a rating of "+ res.confidence +"%";
