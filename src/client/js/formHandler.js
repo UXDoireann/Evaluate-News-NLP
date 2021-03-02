@@ -63,7 +63,7 @@ fetch('http://localhost:8080/addData',{
          
              })
     console.log("::: Form Submitted :::");
-}else{
+}else{      alert("Please enter a valid URL")
             console.log("Not valid url");
         }
      
