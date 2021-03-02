@@ -55,15 +55,15 @@ fetch('http://localhost:8080/addData',{
          else if(res.subjectivity === null){
              document.getElementById('obj').innerHTML = ""}; 
          if(res.irony === 'NONIRONIC'){
-             document.getElementById('ironic').innerHTML = "We detected no irony."}
+             document.getElementById('ironic').innerHTML = "-We detected no irony."}
              else if(res.irony === 'IRONIC'){
-                 document.getElementById('ironic').innerHTML = "Also, we detected a level of irony."}
+                 document.getElementById('ironic').innerHTML = "-Also, we detected a level of irony."}
              else if(res.irony === null){
                  document.getElementById('ironic').innerHTML = ""}    
          
              })
     console.log("::: Form Submitted :::");
-}else{      alert("Please enter a valid URL")
+}else{      alert("Please enter a valid URL");
             console.log("Not valid url");
         }
      
